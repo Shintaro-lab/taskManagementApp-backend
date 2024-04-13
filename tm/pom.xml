@@ -40,6 +40,9 @@
 			<plugin>
 				<groupId>org.graalvm.buildtools</groupId>
 				<artifactId>native-maven-plugin</artifactId>
+				<configuration>
+					<mainClass>com.product.tm.TmApplication</mainClass> <!-- mainクラスの情報を記載 -->
+				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
