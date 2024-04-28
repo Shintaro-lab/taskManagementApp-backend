@@ -5,15 +5,15 @@ import java.util.List;
 public class TaskCard {
     String id;
     String title;
-    List<Task> taskList;
+    List<String> taskIdList;
 
     public TaskCard() {
     }
 
-    public TaskCard(String id, String title, List<Task> taskList) {
+    public TaskCard(String id, String title, List<String> taskIdList) {
         this.id = id;
         this.title = title;
-        this.taskList = taskList;
+        this.taskIdList = taskIdList;
     }
 
     public String getId() {
@@ -24,8 +24,8 @@ public class TaskCard {
         return title;
     }
 
-    public List<Task> getTaskList() {
-        return taskList;
+    public List<String> getTaskIdList() {
+        return taskIdList;
     }
 
     public void setId(String id) {
@@ -36,7 +36,7 @@ public class TaskCard {
         this.title = title;
     }
 
-    public void setTaskList(List<Task> taskList) {
-        this.taskList = taskList;
+    public void setTaskList(List<String> taskIdList) {
+        this.taskIdList = taskIdList;
     }
 }

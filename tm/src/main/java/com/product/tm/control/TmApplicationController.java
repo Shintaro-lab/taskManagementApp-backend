@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.product.tm.entity.Task;
 import com.product.tm.entity.TaskCard;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -19,16 +20,28 @@ public class TmApplicationController {
     @Autowired
     private com.product.tm.service.TmApplicationService tmApplicationService;
 
-    @RequestMapping("getLatestData")
+    @RequestMapping("getLatestTaskCardData")
     @CrossOrigin
-    public ArrayList<TaskCard> searchEmp() {
-        return tmApplicationService.getLatestData();
+    public ArrayList<TaskCard> getLatestTaskCardData() {
+        return tmApplicationService.getLatestTaskCardData();
     }
 
-    @PostMapping("updateData")
+    @RequestMapping("getLatestTaskData")
     @CrossOrigin
-    public void postMethodName(@RequestBody ArrayList<TaskCard> taskCardList) {
-        tmApplicationService.updateData(taskCardList);
+    public ArrayList<Task> getLatestTaskData() {
+        return tmApplicationService.getLatestTaskData();
     }
-    
+
+    @PostMapping("updateTaskCardData")
+    @CrossOrigin
+    public void updateTaskCardData(@RequestBody ArrayList<TaskCard> taskCardList) {
+        tmApplicationService.updateTaskCardData(taskCardList);
+    }
+
+    @PostMapping("updateTaskData")
+    @CrossOrigin
+    public void updateTaskData(@RequestBody ArrayList<Task> taskList) {
+        tmApplicationService.updateTaskData(taskList);
+    }
+
 }
