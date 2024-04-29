@@ -1,1 +1,1 @@
-[{"id":"1","name":"料理","parentTaskId":"","childrenTaskIdList":["99d48ad0-32cb-40e3-b1de-231e74212984"]},{"id":"99d48ad0-32cb-40e3-b1de-231e74212984","name":"Task21","parentTaskId":"1","childrenTaskIdList":[]}]
+[{"id":"1","name":"料理","parentTaskId":"","childrenTaskIdList":["99d48ad0-32cb-40e3-b1de-231e74212984"],"color":"white"},{"id":"99d48ad0-32cb-40e3-b1de-231e74212984","name":"Task21","parentTaskId":"1","childrenTaskIdList":[],"color":"white"}]

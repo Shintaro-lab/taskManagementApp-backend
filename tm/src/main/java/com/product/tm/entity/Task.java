@@ -7,15 +7,17 @@ public class Task {
     String name;
     String parentTaskId;
     List<String> childrenTaskIdList;
+    String color;
 
     public Task() {
     }
 
-    public Task(String id, String name,String parentTaskId, List<String> childrenTaskIdList) {
+    public Task(String id, String name,String parentTaskId, List<String> childrenTaskIdList, String color) {
         this.id = id;
         this.name = name;
         this.parentTaskId = parentTaskId;
         this.childrenTaskIdList = childrenTaskIdList;
+        this.color = color;
     }
 
     public String getId() {
@@ -34,6 +36,10 @@ public class Task {
         return childrenTaskIdList;
     }
 
+    public String getColor() {
+        return color;
+    }
+
     public void setId(String id) {
         this.id = id;
     }
@@ -48,5 +54,9 @@ public class Task {
 
     public void setChildrenTaskIdList(List<String> childrenTaskIdList) {
         this.childrenTaskIdList = childrenTaskIdList;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
     }
 }
